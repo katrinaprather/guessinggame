@@ -41,7 +41,7 @@ function GuessingGame(event) {
 
 		}
 		else if (playerGuess.value == secretNum){
-			result.textContent = "You guessed " + playerGuess.value + ": The secret number is " + secretNum + ":  Attempt " + numOfAttempts + ":  Winner, winner, chicken dinner!";
+			result.textContent = "You guessed " + playerGuess.value + ": \n The secret number is " + secretNum + ":  \n Attempt " + numOfAttempts  + ":  \n Winner, winner, chicken dinner!";
 			winner = true;
 			alert("GAME OVER!");
 			result.textContent = "";
@@ -51,7 +51,7 @@ function GuessingGame(event) {
 	}
 
 	if(numOfAttempts == 4 && winner == false){
-		result.textContent = "The secret number is " + secretNum + ":  Good game kiddo!";
+		result.textContent = "The secret number is " + secretNum + ":  \n Good game kiddo!";
 		alert("GAME OVER!");
 		result.textContent = "";
 	}

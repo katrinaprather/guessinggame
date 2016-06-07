@@ -19,7 +19,7 @@ form{
 	background-color: #E0E1DD;
 	margin: auto;
 	padding: 40px;
-	width: 450px;
+	width: 50%;
 	border-radius: 10px;
 	font-size: 1.1em;
 }
@@ -39,9 +39,19 @@ button{
 	font-family: 'Coda', cursive;;
 }
 
+p{
+	text-align: center;
+}
+
+.container{
+	width: 60%;
+}
+
 #input-submit{
 	font-size: 1.3em;
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
 }
+
+
