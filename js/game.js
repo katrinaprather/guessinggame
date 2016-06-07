@@ -20,7 +20,7 @@
 var secretNum = Math.ceil(Math.random() * 20);	//Produces random number
 var numOfAttempts = 0;	//Keeps track of the number of attempts at guessing the secret number
 var myform = document.querySelector("form");	//Holds the form
-var result = document.querySelector("#feedback"); //Allows game feedback to be displayed to player
+var result = document.getElementById("feedback"); //Allows game feedback to be displayed to player
 var playerGuess = document.querySelector("#guess"); //Holds the player's guess for the secret number 
 var winner = false; //Used to indicate if player wins the game
 
@@ -33,15 +33,15 @@ function GuessingGame(event) {
 
 		if(playerGuess.value != secretNum){
 			if(playerGuess.value > secretNum){
-				result.textContent = playerGuess.value + " is too high! " + "-  Attempt " + numOfAttempts;
+				result.innerHTML = playerGuess.value + " is too high! " + "-  Attempt " + numOfAttempts;
 			}
 			else {
-				result.textContent = playerGuess.value + " is too low! " + "-  Attempt " + numOfAttempts;
+				result.innerHTML = playerGuess.value + " is too low! " + "-  Attempt " + numOfAttempts;
 			}
 
 		}
 		else if (playerGuess.value == secretNum){
-			result.textContent = "You guessed " + playerGuess.value + ": \n The secret number is " + secretNum + ":  \n Attempt " + numOfAttempts  + ":  \n Winner, winner, chicken dinner!";
+			result.innerHTML = "You guessed " + playerGuess.value + "<br />The secret number is " + secretNum + ":  Attempt " + numOfAttempts  + "<br />Winner, winner, chicken dinner!";
 			winner = true;
 			alert("GAME OVER!");
 			result.textContent = "";
@@ -51,7 +51,7 @@ function GuessingGame(event) {
 	}
 
 	if(numOfAttempts == 4 && winner == false){
-		result.textContent = "The secret number is " + secretNum + ":  \n Good game kiddo!";
+		result.innerHTML = "The secret number is " + secretNum + "  <br />Good game kiddo!";
 		alert("GAME OVER!");
 		result.textContent = "";
 	}
