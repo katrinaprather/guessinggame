@@ -41,7 +41,7 @@ function GuessingGame(event) {
 
 		}
 		else if (playerGuess.value == secretNum){
-			result.innerHTML = "You guessed " + playerGuess.value + "<br />The secret number is " + secretNum + ":  Attempt " + numOfAttempts  + "<br />Winner, winner, chicken dinner!";
+			result.innerHTML = "You guessed " + playerGuess.value + "<br />The secret number is " + secretNum + " -  Attempt " + numOfAttempts  + "<br />Winner, winner, chicken dinner!";
 			winner = true;
 			alert("GAME OVER!");
 			result.textContent = "";
