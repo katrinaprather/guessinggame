@@ -45,11 +45,3 @@ button{
 	margin-left: auto;
 	margin-right: auto;
 }
-
-
-@media only screen and (max-width: 768px){
-
-	body{
-		font-size: 1.5em;
-	}
-}
